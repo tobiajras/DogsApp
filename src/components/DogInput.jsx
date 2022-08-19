@@ -28,7 +28,7 @@ export const DogInput = () => {
           placeholder='Golden Retriever...'
         />
       </form>
-      <DogList dogName={enterValue} />
+      <DogList enterValue={enterValue} />
     </div>
   );
 };
