@@ -5,7 +5,7 @@ import './dogInput.scss';
 
 export const DogInput = () => {
   const [inputValue, setInputValue] = useState('');
-  const [enterValue, setEnterValue] = useState('');
+  const [enterValue, setEnterValue] = useState('Bull');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ export const DogInput = () => {
           type='text'
           value={inputValue}
           onChange={handleOnChange}
-          placeholder='Golden Retriever...'
+          placeholder='Bull...'
         />
       </form>
       <DogList enterValue={enterValue} />

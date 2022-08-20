@@ -12,21 +12,14 @@ export const DogList = ({ enterValue }) => {
     setIsLoading(true);
 
     const getDog = async () => {
-      try {
-        const res = await axios.get(
-          `https://api.api-ninjas.com/v1/dogs?name=${enterValue}`,
-          {
-            headers: {
-              'X-Api-Key': 'Lan00N4kqx99ONtgts7ax2u2mkxHUjsoogz1GUfR',
-            },
-          }
-        );
-        setDogData(res.data);
-      } catch (error) {
-        setIsLoading(false);
-      }
-
+      const res = await axios.get(
+        `https://api.api-ninjas.com/v1/dogs?name=${enterValue}`,
+        {
+          headers: { 'X-Api-Key': 'Lan00N4kqx99ONtgts7ax2u2mkxHUjsoogz1GUfR' },
+        }
+      );
       setIsLoading(false);
+      setDogData(res.data);
     };
     getDog();
   }, [enterValue]);
@@ -50,10 +43,9 @@ export const DogList = ({ enterValue }) => {
   // console.log(dogName);
   // console.log(dogData);
 
-  if (isLoading) {
-    return <h4>Loading..</h4>;
-  } else if (dogData.length >= 1) {
-    return <DogsList dogData={dogData} />;
-  }
-  return <h4>Sin resultados</h4>;
+  return (
+    <div>
+      {isLoading ? <h4>Loading...</h4> : <DogsList dogData={dogData} />}
+    </div>
+  );
 };
