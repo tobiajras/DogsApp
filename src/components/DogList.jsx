@@ -22,6 +22,7 @@ export const DogList = ({ enterValue }) => {
           }
         );
         setDogData(res.data);
+       
       } catch (error) {
         setIsLoading(false);
       }
@@ -30,7 +31,7 @@ export const DogList = ({ enterValue }) => {
     };
     getDog();
   }, [enterValue]);
-
+  console.log(dogData)
   // useEffect(() => {
   //   if (enterValue) {
   //     axios
