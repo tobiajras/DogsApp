@@ -9,8 +9,10 @@ export const DogInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEnterValue(inputValue);
-    console.log(enterValue);
+    if (inputValue.trim().length > 0 && !Number) {
+      setEnterValue(inputValue);
+      setInputValue('');
+    }
   };
 
   const handleOnChange = (e) => {

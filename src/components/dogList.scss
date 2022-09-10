@@ -4,16 +4,40 @@
   box-sizing: border-box;
 }
 body {
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  margin: auto;
+  background-color: #0D0D0D;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23703800' fill-opacity='0.47' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  max-width: 1300px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    margin-top: 15px;
+    color: white;
+  }
+}
+
+.noResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    background-color: rgb(202, 28, 28);
+    padding: .8rem;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: white;
+  }
 }
 
 .listGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
 }
 
 .dogCard {
@@ -41,7 +65,8 @@ body {
     font-size: 1.2rem;
     text-align: center;
     padding: 0.5rem;
-    color: #213952;
+    text-align: center;
+    color: #222226;
     font-family: 'Permanent Marker', cursive;
   }
 }
@@ -49,12 +74,15 @@ body {
 .dogDetail {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  background-color: #f5f5f6;
+  opacity: .9;
   margin-top: 10px;
   padding: 10px;
+  font-family: 'Sriracha', cursive;
   
   h4 {
+    color: #222226;
+    font-size: 20px;
     margin-bottom: 3px;
   }
 
@@ -66,7 +94,8 @@ body {
 .divDetail {
   display: flex;
   align-items: center;
-
+  color: #222226;
+  font-family: 'Sriracha', cursive;
   span {
     padding-right: 5px;
   }
@@ -101,6 +130,18 @@ body {
   color: rgb(116, 56, 1);
 }
 
+.renderSwitch0 {
+  position: relative;
+
+  ::before {
+    content: '';
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .listGrid {
     grid-template-columns: 1fr;
@@ -114,5 +155,37 @@ body {
     h4 {
       font-size: 1rem;
     }
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .dogName {
+    padding: 1rem 1rem 0 1rem;
+    
+    h4 {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  .dogDetail {
+    margin-top: 10px;
+    padding: 10px;
+    
+    h4 {
+      margin-bottom: 3px;
+    }
+  
+    hr {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .divDetail {
+    color: #222226;
+    span {
+      padding-right: 5px;
+    }
+  
   }
 }

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import './dogList.scss';
-import { DogsList } from './DogsList';
+import { DogCard } from './DogCard';
 
 export const DogList = ({ enterValue }) => {
   const [dogData, setDogData] = useState([]);
@@ -22,7 +22,6 @@ export const DogList = ({ enterValue }) => {
           }
         );
         setDogData(res.data);
-       
       } catch (error) {
         setIsLoading(false);
       }
@@ -31,7 +30,6 @@ export const DogList = ({ enterValue }) => {
     };
     getDog();
   }, [enterValue]);
-  console.log(dogData)
   // useEffect(() => {
   //   if (enterValue) {
   //     axios
@@ -52,9 +50,17 @@ export const DogList = ({ enterValue }) => {
   // console.log(dogData);
 
   if (isLoading) {
-    return <h4>Loading..</h4>;
+    return (
+      <div className='loading'>
+        <h4>Loading..</h4>
+      </div>
+    );
   } else if (dogData.length >= 1) {
-    return <DogsList dogData={dogData} />;
+    return <DogCard dogData={dogData} />;
   }
-  return <h4>Sin resultados</h4>;
+  return (
+    <div className='noResults'>
+      <h4>No results!</h4>
+    </div>
+  );
 };
