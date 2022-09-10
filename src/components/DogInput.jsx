@@ -9,7 +9,7 @@ export const DogInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim().length > 0 && !Number) {
+    if (inputValue.trim().length > 0) {
       setEnterValue(inputValue);
       setInputValue('');
     }
