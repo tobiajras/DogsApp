@@ -19,7 +19,7 @@ export const DogCard = ({ dogData }) => {
               <h4>{dog.name}</h4>
             </div>
             <div className='dogDetail'>
-              <h4> Details</h4>
+              <h4> Features</h4>
               <hr />
               <div className='divDetail'>
                 <FontAwesomeIcon className='fontIcon maleIcon' icon={faMars} />

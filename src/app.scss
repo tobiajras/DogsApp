@@ -1,3 +1,9 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .app_title {
   font-size: 4rem;
   display: flex;
@@ -6,6 +12,18 @@
   color: white;
   padding: 1.5rem;
   font-family: 'Permanent', cursive;
+}
+
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  background: linear-gradient(180deg, rgba(255,251,120,1) 83%, rgba(255,255,255,1) 100%);
+}
+
+.logoImg {
+  width: 150px;
 }
 
 @media (max-width: 600px) {

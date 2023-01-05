@@ -5,7 +5,9 @@ import './app.scss';
 function App() {
   return (
     <div className='App'>
-      <h2 className='app_title'>Dogs App</h2>
+      <div className='logoDiv'>
+        <img className='logoImg' src='/dog.svg' alt='dog logo' />
+      </div>
       <DogInput />
     </div>
   );
