@@ -17,9 +17,13 @@
 .logoDiv {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   padding-top: 20px;
-  background: linear-gradient(180deg, rgba(255,251,120,1) 65%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 251, 120, 1) 65%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .logoImg {
