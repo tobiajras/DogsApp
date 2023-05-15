@@ -8,11 +8,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 
   ::placeholder {
     color: #a1a1a1;
   }
+}
+
+.dogInput_label {
+  font-family: 'Rokkitt', serif;
+  font-weight: 600;
 }
 
 .dogInput_input {
@@ -25,4 +30,36 @@
   background-color: transparent;
   border-bottom: 2px solid #9b9b9b;
   color: black;
+  font-family: 'Rokkitt', serif;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 576px) {
+  .dogInput_label {
+    font-size: 20px;
+  }
+
+  .dogInput_input {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dogInput_label {
+    font-size: 24px;
+  }
+
+  .dogInput_input {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .dogInput_label {
+    font-size: 26px;
+  }
+
+  .dogInput_input {
+    font-size: 26px;
+  }
 }
