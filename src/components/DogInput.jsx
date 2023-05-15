@@ -22,9 +22,11 @@ export const DogInput = () => {
   return (
     <div className='dogInput_divParent'>
       <form className='dogInput_form' onSubmit={handleSubmit}>
+        <label htmlFor="dogInput">What's your preferred dog breed?</label>
         <input
           className='dogInput_input'
           type='text'
+          id='dogInput'
           value={inputValue}
           onChange={handleOnChange}
           placeholder='Bull...'

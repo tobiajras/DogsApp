@@ -36,12 +36,14 @@ body {
 .listGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+  justify-items: center;
 }
 
 .dogCard {
   display: flex;
   flex-direction: column;
   margin: 2.5rem;
+  max-width: 400px;
 }
 
 .dogName {
